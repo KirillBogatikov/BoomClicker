@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ratings.RatingsFragment">
+
+    <Button
+        android:id="@+id/scores_table_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_button_background"
+        android:padding="@dimen/button_padding"
+        android:text="@string/ok"
+        android:textColor="@color/text_light_default" />
+
+    <LinearLayout
+        android:id="@+id/ratings_current_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scores_table_ok"
+        android:layout_marginTop="@dimen/ratings_user_info_margin_vertical"
+        android:layout_marginBottom="@dimen/ratings_user_info_margin_vertical"
+        android:layout_marginStart="@dimen/ratings_user_info_margin_horizontal"
+        android:layout_marginLeft="@dimen/ratings_user_info_margin_horizontal"
+        android:layout_marginEnd="@dimen/ratings_user_info_margin_horizontal"
+        android:layout_marginRight="@dimen/ratings_user_info_margin_horizontal"
+        android:padding="@dimen/fragment_container_padding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ratings_user_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ratings_user_info_id_margin"
+            android:layout_marginRight="@dimen/ratings_user_info_id_margin"
+            android:layout_weight="1.25"
+            android:gravity="center"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/ratings_list_text_size" />
+
+        <TextView
+            android:id="@+id/ratings_user_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:gravity="center"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/ratings_list_text_size" />
+
+        <TextView
+            android:id="@+id/ratings_user_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/ratings_list_text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ratings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ratings_table_margin_top"
+        android:text="@string/ratings_title"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/ratings_table_title_text_size"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ratingsView"
+        android:layout_margin="@dimen/fragment_container_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ratings_current_user"
+        android:layout_below="@id/ratings_title"
+        tools:listitem="@layout/list_item" />
+
+</RelativeLayout>

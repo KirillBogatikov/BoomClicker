@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listItemUsers"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ratings_list_divider_height"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ratings_item_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/ratings_list_text_size"
+        android:layout_marginRight="@dimen/ratings_user_info_id_margin"
+        android:layout_marginEnd="@dimen/ratings_user_info_id_margin" />
+
+    <TextView
+        android:id="@+id/ratings_item_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/ratings_list_text_size" />
+
+    <TextView
+        android:id="@+id/ratings_item_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/ratings_list_text_size" />
+</LinearLayout>

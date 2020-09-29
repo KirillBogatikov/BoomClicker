@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- platform -->
+    <color name="colorPrimary">#89C348</color>
+    <color name="colorPrimaryDark">#233F00</color>
+    <color name="colorAccent">#233F00</color>
+
+    <!-- app -->
+    <color name="text_default">#233F00</color>
+    <color name="text_light_default">#ffffff</color>
+    <color name="text_light_pressed">#dddddd</color>
+    <color name="background_default">#89C348</color>
+    <color name="background_alpha">#E089C348</color>
+    <color name="background_dark_default">#325900</color>
+    <color name="background_dark_pressed">#233F00</color>
+    <color name="background_dark_alpha">#80233F00</color>
+</resources>

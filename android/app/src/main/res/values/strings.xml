@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">BoomClick</string>
+    <string name="ratings_title">Ratings</string>
+    <string name="ok">OK</string>
+
+    <string name="auth_title">Login and sing up</string>
+    <string name="auth_field_nick">Nick</string>
+    <string name="auth_field_password">Password</string>
+    <string name="auth_action_login">Login</string>
+    <string name="auth_action_back">Back</string>
+    <string name="auth_action_signup">Signup</string>
+    <string name="auth_login_success">Login successful!</string>
+    <string name="auth_signup_success">Signup successful!</string>
+
+    <string name="auth_error_nick_busy">Login busy</string>
+    <string name="auth_error_not_found">User not found</string>
+    <string name="auth_error_forbidden">Incorrect password</string>
+    <string name="auth_error_nick_invalid">Login should contains at least %d symbols and can contains russian and latin letters and numbers</string>
+    <string name="auth_error_password_invalid">Password should contains at least %d symbols and can contains russian and latin letters and numbers</string>
+    <string name="auth_error_sync_failed">Synchronization failed</string>
+    <string name="auth_error_server">Server internal error</string>
+
+    <string name="ratings_error_parsing">Response parsing failed</string>
+    <string name="ratings_error_not_found">Noone users found&#8230;</string>
+    <string name="ratings_error_internal_server">Server internal error</string>
+
+    <string name="pause_title">Pause</string>
+    <string name="pause_new_game">Start new game</string>
+    <string name="pause_continue_game">Continue</string>
+    <string name="pause_exit">Exit</string>
+
+    <string name="no_connection">No connection</string>
+</resources>

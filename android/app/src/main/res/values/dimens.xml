@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="control_icons_margin">10dp</dimen>
+    <dimen name="score_counter_text_size">20sp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+
+    <dimen name="fragment_container_padding">20dp</dimen>
+    <dimen name="fragment_container_margin">25dp</dimen>
+    <dimen name="fragment_border_radius">50dp</dimen>
+    <dimen name="fragment_border_width">2dp</dimen>
+
+    <dimen name="ratings_table_title_text_size">23sp</dimen>
+    <dimen name="ratings_table_margin_top">20dp</dimen>
+    <dimen name="ratings_list_text_size">20sp</dimen>
+    <dimen name="ratings_list_divider_height">10dp</dimen>
+    <dimen name="ratings_user_info_id_margin">15dp</dimen>
+    <dimen name="ratings_user_info_margin_vertical">10dp</dimen>
+    <dimen name="ratings_user_info_margin_horizontal">10dp</dimen>
+
+    <dimen name="pause_title_text_size">23sp</dimen>
+    <dimen name="pause_title_margin_bottom">25dp</dimen>
+
+</resources>

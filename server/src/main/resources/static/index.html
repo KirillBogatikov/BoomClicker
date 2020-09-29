@@ -1,0 +1,73 @@
+<!doctype>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+    </head>
+    <body>
+        <img id="background" src="background.png"/>
+        <div id="container">
+	        <div id="main">
+	            <h1>Boom Clicker</h1>
+	            <p>TOP list of users:</p>
+	            <table id="table">
+	               <tr>
+	                   <th>Nick name</th>
+	                   <th>Score</th>
+	               </tr>
+	            </table>
+	            <p>Players: <span id="count">0</span></p>
+                <p id="checker">Check user score:<br>
+                   Nick: <input type="text" id="nick"/>
+                   <button onclick="checkScore()">Check</button>
+                </p>
+                <p id="info">
+                    Nick: <span id="nick"></span><br>
+                    Score: <span id="score"></span>
+                    <button onclick="$('#info').fadeOut();$('#checker').fadeIn();">Ok</button>
+                </p>
+	        </div>
+        </div>   
+        <script
+              src="https://code.jquery.com/jquery-3.4.1.min.js"
+              integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+        <script>
+            onload = function() {
+            	$.ajax({
+	            	type: "GET",
+	            	url: "table/top"
+	            }).done(function(r) {
+	            	var table = $("#table");
+	            	for(var i = 0; i < r.length; i++) {
+	            		var row = $("<tr></tr>");
+	            		row.append($("<td></td>").html(r[i].nick));
+                        row.append($("<td></td>").html(r[i].score));
+                        table.append(row);
+	            	}
+	            });
+            	$.ajax({
+            		type: "GET",
+            		url: "table/count"
+            	}).done(function(r) {
+           		   var count = $("#count");
+           		   count.html(r);
+            	});
+            }
+            
+            function checkScore() {
+            	var nick = $("#nick").val();
+            	
+            	$.ajax({
+            		type: "GET",
+            		url: "/user/nick/" + nick
+            	}).done(function(u) {
+            		$("#checker").fadeOut();
+            		$("#info #nick").html(u.nick);
+            		$("#score").html(u.score);
+            		$("#info").fadeIn();
+            	});
+            }
+        </script>
+    </body>
+</html>
